@@ -29,18 +29,22 @@ body {
   margin: 0 auto;
   padding: 0px 15px;
   @extend %clearfix;
-  @include xs-screens {
+  @include xs-screens-only {
     width: auto;
   }
-  @include sm-screens {
+  @include sm-screens-only {
     width: $container-sm-width;
   }
-  @include md-screens {
+  @include md-screens-only {
     width: $container-md-width;
   }
- @include lg-screens {
+ @include lg-screens-only {
     width: $container-lg-width;
   }
+}
+.container-fluid {
+  padding:0px 15px;
+  margin: 0px auto;
 }
 .row {
 @extend %clearfix;
@@ -66,8 +70,8 @@ body {
 }
 
 
-@include xs-screens {
-  @for $i from 1 to 13 {
+@include xs-screens-only {
+  @for $i from 1 to ($columns + 1) {
     .col-xs-#{$i} {
       width: col-width($column-span: $i);
     }
@@ -77,27 +81,35 @@ body {
 }
 }
 @include sm-screens {
-  @for $i from 1 to 13 {
+  @for $i from 1 to ($columns + 1) {
     .col-sm-#{$i} {
       width: col-width($column-span: $i);
     }
+  }
+}
+@include sm-screens-only {
+  @for $i from 1 to ($columns + 1) {
     .col-sm-offset-#{$i} {
       margin-left: col-offset($column-span: $i);
     }
 }
 }
 @include md-screens {
-  @for $i from 1 to 13 {
+  @for $i from 1 to ($columns + 1) {
     .col-md-#{$i} {
       width: col-width($column-span: $i);
     }
+  }
+}
+@include md-screens-only {
+  @for $i from 1 to ($columns + 1) {
     .col-md-offset-#{$i} {
       margin-left: col-offset($column-span: $i);
     }
 }
 }
-@include lg-screens {
-  @for $i from 1 to 13 {
+@include lg-screens-only {
+  @for $i from 1 to ($columns + 1) {
     .col-lg-#{$i} {
       width: col-width($column-span: $i);
     }
