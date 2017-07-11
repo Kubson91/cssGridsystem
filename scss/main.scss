@@ -1,0 +1,109 @@
+@import "partials/variables";
+@import "partials/functions";
+@import "partials/mixins";
+
+%clearfix{
+  &:before{
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+* {
+@include box-sizing;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 15px;
+  @extend %clearfix;
+  @include xs-screens {
+    width: auto;
+  }
+  @include sm-screens {
+    width: $container-sm-width;
+  }
+  @include md-screens {
+    width: $container-md-width;
+  }
+ @include lg-screens {
+    width: $container-lg-width;
+  }
+}
+.row {
+@extend %clearfix;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+[class^='col-'] {
+  width:100%;
+  float: left;
+  margin-right: $gutter;
+  min-height: 1px;
+  @include box-sizing;
+  &:last-child {
+    margin-right: 0px;
+  }
+  @if $test == 1 {
+    border: 1px solid #000;
+  }
+}
+
+[class^='col-offset-'] {
+  margin-left: col-width();
+}
+
+
+@include xs-screens {
+  @for $i from 1 to 13 {
+    .col-xs-#{$i} {
+      width: col-width($column-span: $i);
+    }
+    .col-xs-offset-#{$i} {
+      margin-left: col-offset($column-span: $i);
+    }
+}
+}
+@include sm-screens {
+  @for $i from 1 to 13 {
+    .col-sm-#{$i} {
+      width: col-width($column-span: $i);
+    }
+    .col-sm-offset-#{$i} {
+      margin-left: col-offset($column-span: $i);
+    }
+}
+}
+@include md-screens {
+  @for $i from 1 to 13 {
+    .col-md-#{$i} {
+      width: col-width($column-span: $i);
+    }
+    .col-md-offset-#{$i} {
+      margin-left: col-offset($column-span: $i);
+    }
+}
+}
+@include lg-screens {
+  @for $i from 1 to 13 {
+    .col-lg-#{$i} {
+      width: col-width($column-span: $i);
+    }
+    .col-lg-offset-#{$i} {
+      margin-left: col-offset($column-span: $i);
+    }
+  }
+}
