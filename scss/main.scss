@@ -44,14 +44,16 @@ body {
 }
 .row {
 @extend %clearfix;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter/ -2);
 }
 
 [class^='col-'] {
   width:100%;
   float: left;
-  margin-right: $gutter;
+  padding-right: ($gutter/2);
+  padding-left: ($gutter/2);
+  margin-right: ($gutter/2);
   min-height: 1px;
   @include box-sizing;
   &:last-child {
