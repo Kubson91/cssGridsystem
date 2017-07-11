@@ -2,7 +2,7 @@
   @if $column-span == $columns {
     @return 100%;
   }
-  @return ($max-width / ($columns/$column-span)) - ($gap * ($columns - $column-span)/$columns)
+  @return ($max-width / ($columns/$column-span))
 }
 @function col-offset($columns: $columns, $max-width: 100%, $column-span: 1 ) {
   @return ($max-width / $columns) * $column-span;
