@@ -1,0 +1,9 @@
+@function col-width($columns: $columns, $max-width: 100%, $gap: $gutter, $column-span:1) {
+  @if $column-span == $columns {
+    @return 100%;
+  }
+  @return ($max-width / ($columns/$column-span)) - ($gap * ($columns - $column-span)/$columns)
+}
+@function col-offset($columns: $columns, $max-width: 100%, $column-span: 1 ) {
+  @return ($max-width / $columns) * $column-span;
+}
