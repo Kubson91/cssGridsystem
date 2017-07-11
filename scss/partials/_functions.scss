@@ -1,4 +1,4 @@
-@function col-width($columns: $columns, $max-width: 100%, $gap: $gutter, $column-span:1) {
+@function col-width($columns: $columns, $max-width: 100%, $gap: ($gutter/2), $column-span:1) {
   @if $column-span == $columns {
     @return 100%;
   }
