@@ -9,29 +9,73 @@
 
 <body>
   <style>
-    [class^='col-'] {
+    .column-stylized { 
       border: 1px solid #000;
+      border-radius: 5px;
+      background-color: #ccc;
+      color: aquamarine;
+    }
+    .row {
+      margin-top:5px;
+      margin-bottom: 5px;
+    }
+    .container-fluid {
+      margin-top:100px;
+    }
+    .body {
+      background-color: orange;
     }
   </style>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-8">.col-xs-12 .col-md-8</div>
-    <div class="col-xs-12 col-sm-4 col-md-4">.col-xs-12 .col-md-4</div>
+    <div class="col-xs-12 col-sm-8 col-md-8">
+      <div class="column-stylized">
+        .col-xs-12 .col-md-8
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">      
+      <div class="column-stylized">
+        .col-xs-12 .col-md-4
+      </div>
+    </div>
   </div>
   <div class="row">
-    <div class="col-xs-6 col-sm-3 col-md-6">.col-xs-6 .col-sm-3 .col-md-6</div>
-    <div class="col-xs-6 col-sm-3 col-md-6">.col-xs-6 .col-sm-3 .col-md-6</div>
-    <div class="col-xs-6 col-sm-3 col-md-6">.col-xs-6 .col-sm-3 .col-md-6</div>
-    <div class="col-xs-6 col-sm-3 col-md-6">.col-xs-6 .col-sm-3 .col-md-6</div>
+    <div class="col-xs-6 col-sm-3 col-md-6">
+      <div class="column-stylized">
+      .col-xs-6 .col-sm-3 .col-md-6
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-6">
+      <div class="column-stylized">
+      .col-xs-6 .col-sm-3 .col-md-6
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-6">
+      <div class="column-stylized">
+      .col-xs-6 .col-sm-3 .col-md-6
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-6">
+      <div class="column-stylized">
+      .col-xs-6 .col-sm-3 .col-md-6
+      </div>
+    </div>
   </div>
 </div>
 <!-- Columns are always 50% wide, on mobile and desktop -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-6 col-sm-3 col-md-6">.col-xs-6 .col-sm-3 .col-md-6</div>
-    <div class="col-xs-6 col-sm-7 col-sm-offset-2 col-md-6">.col-xs-6 .col-sm-7 .col-sm-offset-2 .col-md-6</div>
+    <div class="col-xs-6 col-sm-3 col-md-6">
+      <div class="column-stylized">
+        .col-xs-6 .col-sm-3 .col-md-6
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-7 col-sm-offset-2 col-md-6">
+      <div class="column-stylized">
+        .col-xs-6 .col-sm-7 .col-sm-offset-2 .col-md-6
+      </div>
+    </div>
   </div>
 </div>
-  </div>
 </body>
 </html>
