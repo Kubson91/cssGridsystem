@@ -13,7 +13,8 @@
       border: 1px solid #000;
       border-radius: 5px;
       background-color: #ccc;
-      color: aquamarine;
+      color: black;
+			text-align: center;
     }
     .row {
       margin-top:5px;
@@ -22,11 +23,13 @@
     .container-fluid {
       margin-top:100px;
     }
-    .body {
-      background-color: orange;
-    }
+		body {
+			overflow-x: hidden;
+		}
+
   </style>
 <div class="container">
+	<h2> Grid Example</h2>
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-8">
       <div class="column-stylized">
@@ -64,6 +67,7 @@
 </div>
 <!-- Columns are always 50% wide, on mobile and desktop -->
 <div class="container-fluid">
+	<h2>Offset Example</h2>
   <div class="row">
     <div class="col-xs-6 col-sm-3 col-md-6">
       <div class="column-stylized">
@@ -79,6 +83,7 @@
 </div>
   
 <div class="container-fluid">
+	<h2>Container Fuid Example</h2>
   <div class="row">
     <div class="col-sm-12">
       <div class="column-stylized">
@@ -231,6 +236,22 @@
       </div>
     </div>
   </div>
+</div>
+	
+<div class="container-fluid">
+	<h2>CSS Shapes examples - there are more!</h2>
+	<div class="row">
+		<div class="col-sm-4">
+					<div class="oval"></div>
+		</div>
+		<div class="col-sm-4">
+					<div class="up-triangle"></div>
+		</div>
+		<div class="col-sm-4">
+					<div class="down-triangle"></div>
+		</div>
+	</div>
+</div>
 </div>
 </body>
 </html>

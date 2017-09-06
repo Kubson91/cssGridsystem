@@ -1,6 +1,7 @@
 @import "partials/variables";
 @import "partials/functions";
 @import "partials/mixins";
+@import "partials/shapes";
 
 %clearfix{
   &:before{
@@ -60,9 +61,6 @@ body {
   padding-left: ($gutter/2);
   min-height: 1px;
   @include box-sizing;
-  @if $test == 1 {
-    border: 1px solid #000;
-  }
 }
 
 [class^='col-offset-'] {
@@ -117,4 +115,47 @@ body {
       margin-left: col-offset($column-span: $i);
     }
   }
+}
+
+@if $test == 1 {
+	//Usage:
+	.parallelogram {
+		@include parallelogram(100px, 70px, 10deg, red );
+	}
+	.oval {
+		@include oval(100px, 100px, green);
+	}
+	.up-triangle {
+		@include triangle(up, 60px, blue );
+	}
+	.down-triangle {
+		@include triangle(down, 60px, red );
+	}
+	.left-triangle {
+		@include triangle(left, 60px, green );
+	}
+	.right-triangle {
+		@include triangle(right, 60px, blue );
+	}
+	.top-left-triangle {
+		@include corner-triangle(top-left, 120px, 120px, red );
+	}
+	.top-right-triangle {
+		@include corner-triangle(top-right, 120px, 120px, green );
+	}
+	.bottom-left-triangle {
+		@include corner-triangle(bottom-left, 120px, 120px, blue );
+	}
+	.bottom-right-triangle {
+		@include corner-triangle(bottom-right, 120px, 120px, red );
+	}
+	.trapezoid {
+		@include trapezoid(80px, green );
+	}
+	.chevron {
+		@include chevron(down, 120px, 50px, 15deg, blue );
+	}
+	.hexagon {
+		@include hexagon(30px, 62px, red);
+	}
 }
